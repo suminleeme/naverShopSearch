@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+// 관심 상품 테이블
 @Getter // get 함수 일괄 생성해줌
 @NoArgsConstructor // 기본 생성자를 만들어줌
 @Entity // DB 테이블 역할을 함

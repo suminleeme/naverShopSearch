@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 
+// 관심 상품 가격 변경
 @RequiredArgsConstructor // final로 선언된 멤버 변수를 자동으로 생성
 @Service // 서비스임을 선언
 public class ProductService {
