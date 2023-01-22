@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+// 관심 상품 관련 컨트롤러
 @RequiredArgsConstructor // final로 선언된 멤버 변수를 자동으로 생성
 @RestController // JSON으로 데이터를 주고받음을 선언
 public class ProductRestController {
