@@ -1,10 +1,7 @@
 package com.example.navershopsearch;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +25,11 @@ public class ProductRestController {
         Product product = new Product(requestDto);
         productRepository.save(product);
         return product;
+    }
+
+    // 설정 가격 변경
+    @PutMapping("/api/product/{id}")
+    public Long updateProduct(@PathVariable Long id, @RequestBody ProductMyPriceRequestDto requestDto) {
+        return productService.update(id, requestDto);
     }
 }
