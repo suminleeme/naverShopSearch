@@ -1,3 +1,4 @@
+/*
 package com.example.navershopsearch;
 
 import lombok.Getter;
@@ -50,3 +51,5 @@ public class Product extends Timestamped {
        this.lprice = itemDto.getLprice();
     }
 }
+*/
+

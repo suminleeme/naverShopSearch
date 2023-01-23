@@ -1,3 +1,4 @@
+/*
 package com.example.navershopsearch;
 
 import lombok.RequiredArgsConstructor;
@@ -33,3 +34,4 @@ public class ProductRestController {
         return productService.update(id, requestDto);
     }
 }
+*/

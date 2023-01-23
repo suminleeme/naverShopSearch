@@ -1,4 +1,4 @@
-package com.example.navershopsearch;
+package com.example.navershopsearch.spring.dto;
 
 import lombok.Getter;
 

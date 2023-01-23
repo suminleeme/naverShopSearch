@@ -1,3 +1,4 @@
+/*
 package com.example.navershopsearch;
 
 // 검색 관련 컨트롤러
@@ -22,3 +23,5 @@ public class SearchRequestController {
         return naverShopSearch.fromJSONtoItems(resultString);
     }
 }
+*/
+

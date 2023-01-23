@@ -1,4 +1,4 @@
-package com.example.navershopsearch;
+package com.example.navershopsearch.spring;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

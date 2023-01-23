@@ -1,4 +1,4 @@
-package com.example.navershopsearch;
+package com.example.navershopsearch.spring.dto;
 
 // 검색 결과 주고받기
 
