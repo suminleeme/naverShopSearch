@@ -1,10 +1,8 @@
-package com.example.navershopsearch;
-
+package com.example.navershopsearch.servlet;
 import lombok.Getter;
 
-// 관심 상품 등록하기
 @Getter
-public class ProductRequestDto {
+public class ItemDto {
     private String title;
     private String link;
     private String image;

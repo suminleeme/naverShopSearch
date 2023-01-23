@@ -1,3 +1,4 @@
+/*
 package com.example.navershopsearch.utils;
 
 import com.example.navershopsearch.ItemDto;
@@ -51,3 +52,4 @@ public class Scheduler {
     }
 
 }
+*/

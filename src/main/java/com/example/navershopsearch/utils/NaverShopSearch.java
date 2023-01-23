@@ -1,3 +1,4 @@
+/*
 package com.example.navershopsearch.utils;
 
 import com.example.navershopsearch.ItemDto;
@@ -50,4 +51,5 @@ public class NaverShopSearch {
         String ret = naverShopSearch.search("아이맥");
         naverShopSearch.fromJSONtoItems(ret);
     }
-}
+}*/
+
