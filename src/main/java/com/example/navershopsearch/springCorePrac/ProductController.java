@@ -13,10 +13,11 @@ public class ProductController {
 
     private final ProductService productService;
 
-    public ProductController() {
-        ProductService prductService = new ProductService();
-        this.productService = prductService;
+/* -> @RequiredArgsConstructor 가 대신 생성, 생략
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
+*/
 
     // 신규 상품 등록
     @PostMapping("/api/products")

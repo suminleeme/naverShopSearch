@@ -1,14 +1,19 @@
 package com.example.navershopsearch.springCorePrac;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.sql.SQLException;
 import java.util.List;
 
+@Component // DI를 생성하기 위해 객체 생성이 되어야 하는데, 스프링 프레임워크가 @Component로 선언된 클래스를 객체로 만들어서 관리함('빈(Bean)' 객체)
 public class ProductService {
 
+    @Autowired // 이 멤버변수는 스프링에 의해 DI(외존성 주입) 됨
     private final ProductRepository productRepository;
 
-    public ProductService() {
-        ProductRepository productRepository = new ProductRepository();
+    @Autowired // 이 함수가 사용하는 빈은 스프링에 의해 DI 됨
+    public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
