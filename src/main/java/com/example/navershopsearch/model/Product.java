@@ -1,5 +1,6 @@
-package com.example.navershopsearch.springCorePrac;
+package com.example.navershopsearch.model;
 
+import com.example.navershopsearch.dto.ProductRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

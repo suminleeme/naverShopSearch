@@ -1,4 +1,4 @@
-package com.example.navershopsearch.spring.dto;
+package com.example.navershopsearch.prac.spring_initialcourse.dto;
 
 import lombok.Getter;
 

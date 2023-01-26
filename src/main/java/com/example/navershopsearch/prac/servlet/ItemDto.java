@@ -1,4 +1,4 @@
-package com.example.navershopsearch.servlet;
+package com.example.navershopsearch.prac.servlet;
 import lombok.Getter;
 
 @Getter

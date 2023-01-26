@@ -1,4 +1,4 @@
-package com.example.navershopsearch.servlet;
+package com.example.navershopsearch.prac.servlet;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
