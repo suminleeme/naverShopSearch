@@ -1,5 +1,4 @@
-/*
-package com.example.navershopsearch.prac.spring_initialcourse.dto;
+package com.example.navershopsearch.dto;
 
 // 검색 결과 주고받기
 
@@ -13,10 +12,14 @@ public class ItemDto {
     private String image;
     private int lprice;
 
+    public ItemDto() {
+
+    }
+
     public ItemDto(JSONObject itemJson) {
         this.title = itemJson.getString("title");
         this.link = itemJson.getString("link");
         this.image = itemJson.getString("image");
         this.lprice = itemJson.getInt("lprice");
     }
-}*/
+}

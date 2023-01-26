@@ -1,3 +1,4 @@
+/*
 package com.example.navershopsearch.prac.spring_initialcourse.dto;
 
 import lombok.Getter;
@@ -10,3 +11,4 @@ public class ProductRequestDto {
     private String image;
     private int lprice;
 }
+*/

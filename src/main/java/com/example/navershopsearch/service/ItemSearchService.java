@@ -1,6 +1,6 @@
-/*
-package com.example.navershopsearch.prac.servlet;
+package com.example.navershopsearch.service;
 
+import com.example.navershopsearch.dto.ItemDto;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -9,23 +9,15 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(urlPatterns = "/api/search")
-public class ItemSearchSevlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // 1. API Request 의 파라미터 값에서 검색어 추출 -> query 변수
-        String query = request.getParameter("query");
-
+@Service
+public class ItemSearchService {
+    public List<ItemDto> getItems(String query) throws IOException {
         // 2. 네이버 쇼핑 API 호출에 필요한 Header, Body 정리
         RestTemplate rest = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
@@ -47,16 +39,6 @@ public class ItemSearchSevlet extends HttpServlet {
                 .readerFor(new TypeReference<List<ItemDto>>() {})
                 .readValue(itemsNode);
 
-        // 5. API Response 보내기
-        //  5.1) response 의 header 설정
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        //  5.2) response 의 body 설정
-        PrintWriter out = response.getWriter();
-        //     - itemDtoList (자바 객체 형태) -> itemDtoListJson (JSON 형태)
-        String itemDtoListJson = objectMapper.writeValueAsString(itemDtoList);
-        out.print(itemDtoListJson);
-        out.flush();
+        return itemDtoList;
     }
-}*/
-
+}

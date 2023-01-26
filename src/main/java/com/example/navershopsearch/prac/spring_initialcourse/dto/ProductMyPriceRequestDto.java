@@ -1,3 +1,4 @@
+/*
 package com.example.navershopsearch.prac.spring_initialcourse.dto;
 
 import lombok.Getter;
@@ -7,3 +8,4 @@ import lombok.Getter;
 public class ProductMyPriceRequestDto {
     private int myprice;
 }
+*/

@@ -1,3 +1,5 @@
+/*
+
 package com.example.navershopsearch.prac.servlet;
 import lombok.Getter;
 
@@ -8,3 +10,5 @@ public class ItemDto {
     private String image;
     private int lprice;
 }
+
+*/

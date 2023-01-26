@@ -1,7 +1,8 @@
 /*
-package com.example.navershopsearch.servlet.controller;
 
-import com.example.navershopsearch.servlet.ItemDto;
+package com.example.navershopsearch.prac.servlet.controller;
+
+import com.example.navershopsearch.prac.servlet.ItemDto;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -53,5 +54,6 @@ public class ItemSearchController {
 
         return itemDtoList;
     }
-}*/
+}
 
+*/
