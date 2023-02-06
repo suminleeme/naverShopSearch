@@ -5,24 +5,25 @@ import com.example.navershopsearch.model.User;
 import com.example.navershopsearch.model.UserRoleEnum;
 import com.example.navershopsearch.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Service
 public class UserService {
+    private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private static final String ADMIN_TOKEN = "AAABnv/xRVklrnYxKZ0aHgTBcXukeZygoC";
 
     @Autowired
-    public UserService(UserRepository userRepository) {
+    public UserService(PasswordEncoder passwordEncoder, UserRepository userRepository) {
+        this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
     }
 
     public void registerUser(SignupRequestDto requestDto) {
         String username = requestDto.getUsername();
-        String password = requestDto.getPassword();
 
         // 회원 id 중복 확인
         Optional<User> found = userRepository.findByUsername(username);
@@ -30,7 +31,10 @@ public class UserService {
             throw new IllegalArgumentException("중복된 사용자 아이디가 존재합니다.");
         }
 
+        // 패스워드 암호화
+        String password = passwordEncoder.encode(requestDto.getPassword());
         String email = requestDto.getEmail();
+
         // 사용자 ROLE 확인
         UserRoleEnum role = UserRoleEnum.USER;
         if (requestDto.isAdmin()) {
