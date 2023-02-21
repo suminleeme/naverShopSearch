@@ -30,6 +30,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.json/json // java에서 json (JSONObject, JSONArray) 쓰기 위해 import
     implementation group: 'org.json', name: 'json', version: '20220924'
 
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // Thymeleaf (뷰 템플릿 엔진)
+
 }
 
 tasks.named('test') {

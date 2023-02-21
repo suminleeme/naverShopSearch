@@ -34,6 +34,10 @@ public class Product {
     @Column(nullable = false)
     private int myprice;
 
+    // 등록한 회원 정보
+    @Column(nullable = false)
+    private Long userId;
+
     // 관심 상품 생성 시 이용합니다.
     public Product(ProductRequestDto requestDto) {
         this.title = requestDto.getTitle();
