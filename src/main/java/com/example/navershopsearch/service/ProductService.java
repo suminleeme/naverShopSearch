@@ -47,4 +47,9 @@ public class ProductService {
 
         return products;
     }
+
+    // 회원 ID 로 등록된 상품 조회
+    public List<Product> getProducts(Long userId) {
+        return productRepository.findAllByUserId(userId);
+    }
 }
